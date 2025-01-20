@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/images/develop-icon-7-fotor-2024121717196.png" type="image/x-icon">
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav class="navbar colortheme navbar-dark navbar-expand-sm py-3 sticky-top text-white">
+        <div class="container-fluid">
+            <h1><a href="#start" class="text-white nav-link"><i class="bi-pen-fill fs-1 me-2 p-3"></i>Landing Page</a></h1>
+            <div class="navbar-nav ms-auto">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="bg-white">
+        <section id="start" class="colortheme container-fluid text-white p-5 d-flex flex-column flex-sm-row align-items-center justify-content-between">
+            <div class="text-center text-sm-start">
+                <h2>Web Developer</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, sed, assumenda deleniti quae aliquam ullam adipisci, magnam ipsam voluptatum tempora neque!</p>
+            </div>
+            <img src="https://via.placeholder.com/200" alt="your photo" class="mt-2 mb-2 rounded-pill">
+        </section>
+
+        <section id="work" class="text-center">
+            <h2 class="p-3 m-3">Projects</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 p-3">
+                <div class="col">
+                    <div class="card shadow-lg rounded-2">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h4 class="card-title">Project One</h4>
+                            <p class="card-text">Web Development</p>
+                            <a href="#work" class="text-primary nav-link link-opacity-50-hover"><i class="bi bi-globe2"></i> website preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-lg rounded-2">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h4 class="card-title">Project Two</h4>
+                            <p class="card-text">UI/UX Design</p>
+                            <a href="#work" class="text-primary nav-link link-opacity-50-hover"><i class="bi bi-globe2"></i> website preview</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-lg rounded-2">
+                        <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h4 class="card-title">Project Three</h4>
+                            <p class="card-text">Mobile App</p>
+                            <a href="#work" class="text-primary nav-link link-opacity-50-hover"><i class="bi bi-globe2"></i> website preview</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="shadow-lg p-3 m-3">
+                <h1>About the Projects</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas hic consectetur corrupti, accusantium commodi dicta consequuntur...</p>
+            </div>
+        </section>
+
+        <section id="about" class="colortheme p-5">
+            <div class="text-white p-3 m-3">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, quo quam cupiditate accusamus consequatur delectus...</p>
+            </div>
+        </section>
+
+        <section id="contact" class="container mt-5 mb-5 pt-5 pb-5">
+            <form class="shadow-lg rounded-2 p-2 w-75 mx-auto" id="contactForm">
+                <h3 class="text-center">Contact</h3>
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="message">Message</label>
+                    <input type="text" id="message" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 shadow-lg">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="p-4 colortheme text-light d-flex justify-content-between">
+        <div class="d-flex m-3">
+            <p>&copy; 2024 Gustavo De Melo. All rights reserved.</p>
+        </div>
+        <div class="d-flex m-3">
+            <a href="#" class="nav-link m-2 p-2">Privacy Policy</a>
+            <a href="#" class="nav-link m-2 p-2">Terms of Service</a>
+            <a href="#" class="nav-link m-2 p-2">Credits</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = `<svg class="animate-spin h-5 w-5 mr-3 inline-block" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg> Sending...`;
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            submitButton.innerHTML = 'Message Sent!';
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+                e.target.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
